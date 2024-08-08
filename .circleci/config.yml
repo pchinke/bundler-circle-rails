@@ -32,7 +32,7 @@ jobs:
           command: |
             echo "This is an integration step"
             exit 1
-          when: always                    # Even if the job fails, continue to the next stages
+          when: on_fail                    # Even if the job fails, continue to the next stages
 
   prod:
     machine: true
