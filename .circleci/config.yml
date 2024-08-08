@@ -6,6 +6,7 @@ jobs:
       - run: echo "This is a build step"    # similar to "script" in GitLab
 
   test:
+    machine: true
     steps:
       - checkout
       - run: echo "This is a test step"
@@ -24,6 +25,7 @@ jobs:
           when: always
 
   integration:
+    machine: true
     steps:
       - checkout
       - run:
@@ -33,6 +35,7 @@ jobs:
           when: always                    # Even if the job fails, continue to the next stages
 
   prod:
+    machine: true
     steps:
       - checkout
       - run: echo "This is a deploy step."
