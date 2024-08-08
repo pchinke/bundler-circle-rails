@@ -1,5 +1,7 @@
 jobs:
   build:
+    docker:
+      - image: ubuntu-20.04
     steps:
       - checkout
       - run: echo "This is a build step"    # similar to "script" in GitLab
